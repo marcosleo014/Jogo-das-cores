@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border: solid red 1px
+}
+
+header {
+    width: 100vw;
+    text-align: center;
+    align-content: center;
+}
+
+.quadrado {
+    width: 70px;
+    height: 70px;
+    box-shadow: 2px 2px 5px 2px#d0d0d0;
+    background-color: #000;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+.quadrado:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+main {
+    width: 230px;
+    height: 230px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
