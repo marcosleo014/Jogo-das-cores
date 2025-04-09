@@ -39,7 +39,9 @@ function alterarCor(lista) {
 function destacar(lista) {
     lista.forEach(q => {
         quadrados[q].style.boxShadow = "0px 0px 5px 5px rgb(24, 189, 32)"
-        quadrados[q].style.transform = "scale(1.05)"
+        quadrados[q].style.transform = "scale(1.08)"
+        quadrados[q].style.cursor = "pointer"
+        quadrados[q].style.opacity = "1"
     })
 }
 
@@ -47,6 +49,8 @@ function resetDestacar(lista) {
     lista.forEach(q => {
         quadrados[q].style.boxShadow = "2px 2px 5px 2px #d0d0d0"
         quadrados[q].style.transform = "scale(1)"
+        quadrados[q].style.opacity = "0.9"
+
         
     })
 }
@@ -82,7 +86,7 @@ function verificar(n) {
             brancos++
         }
     }
-    if (brancos == n) {
+    if (brancos == Math.pow(n,2)) {
         msg.innerHTML = "<h3>Parabéns! Você conseguiu.</h3>"
         cores.forEach(q => {
             q = 1
